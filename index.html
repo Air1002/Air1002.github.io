@@ -1,57 +1,282 @@
-<!-- <html>
-  <head>
-    <title>Cha Jeemin</title>
-    <style>
-      body {
-        background-color:
-      #CCEEFF;
-      }
-      .card{
-        border: 2px solid #000000;
-        border-radius: 10px;
-        padding:10px 
-        margin : 10px;
-      }
-      #name{
-        color:blue;
-      }
-    </style>
-  </head>
-  <body>
-    <div>
-      <div class="card">
-        <p id = "name">name : Cha jeemin</p>
-          <p id = "Age">Age : 17</p>
-        </div>
-        <div class="card">
-          <p id = "name2">name : Cha jeemin</p>
-          <p id = "Age : 172">Age : 17</p>
-        </div>
-    </div>
-  </body>
-</html> -->
-
-
 <!DOCTYPE html>
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>웹사이트</title>
+    <title>소리 기반 모기 퇴치제 연구</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+
+      body {
+          font-family: Arial, sans-serif;
+          line-height: 1.6;
+          margin: 20px;
+          background-color: #e9ecef; /* 페이지 배경 색상 */
+      }
+      .header {
+            background-color: black;
+            color: white;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .header input[type="text"] {
+            padding: 5px;
+            border: none;
+            border-radius: 4px;
+        }
+      header, section, footer {
+          border: 2px solid #006bb3; /* 박스 테두리 색상 */
+          border-radius: 8px; /* 테두리 둥글게 */
+          padding: 15px;
+          margin-bottom: 20px; /* 섹션 간격 */
+          background-color: #ffffff; /* 각 박스의 배경 색상 */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* 박스 그림자 */
+      }
+      h1 {
+            color: blue; /* 제목 색상을 파란색으로 설정 */
+        }
+      
+      header {
+          background-color: #f8f9fa; /* 헤더 배경 색상 */
+      }
+      nav ul {
+          list-style-type: none;
+          padding: 0;
+      }
+      nav ul li {
+          display: inline; /* 내비게이션 항목을 가로로 나열 */
+          margin-right: 15px;
+      }
+      footer {
+          background-color: #f8f9fa; /* 푸터 배경 색상 */
+          text-align: center;
+      }
+      body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+        }
+        header, section, footer {
+            border: 2px solid #007BFF; /* 박스 테두리 색상 */
+            border-radius: 8px; /* 테두리 둥글게 */
+            padding: 15px;
+            margin-bottom: 20px; /* 섹션 간격 */
+        }
+        header {
+            background-color: #f8f9fa; /* 헤더 배경 색상 */
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline; /* 내비게이션 항목을 가로로 나열 */
+            margin-right: 15px;
+        }
+        footer {
+            background-color: #f8f9fa; /* 푸터 배경 색상 */
+            text-align: center;
+        }
+        h2 {
+            color: blue; /* 제목 색상을 파란색으로 설정 */
+        }
+        .content {
+            display: none; /* 기본적으로 내용 숨김 */
+        }
+        .toggle-button {
+            cursor: pointer; /* 버튼 커서 모양 변경 */
+            background-color: hwb(214 0% 36%);
+            color: white;
+            border: none;
+            border-radius: 4px;
+            padding: 5px 10px;
+            transition: background-color 0.3s; /* 색상 변화에 부드러운 전환 추가 */
+        }
+        .toggle-button:hover {
+    background-color: hwb(224 0% 0%); /* 마우스 오버 시 배경 색상 */
+} 
+.search-container {
+    display: flex;
+    align-items: center; /* 수직 가운데 정렬 */
+    margin-top: 10px; /* 헤더와 검색창 간격 */
+}
+
+.search-box {
+    width: 300px; /* 검색창 너비 */
+    padding: 10px; /* 여백 */
+    border: 1px solid #ccc; /* 테두리 색상 */
+    border-radius: 4px; /* 둥근 모서리 */
+    margin-right: 5px; /* 버튼과 간격 */
+}
+
+.search-button {
+    padding: 10px 15px; /* 여백 */
+    background-color: #007BFF; /* 버튼 배경 색상 */
+    color: white; /* 글자 색상 */
+    border: none; /* 테두리 제거 */
+    border-radius: 4px; /* 둥근 모서리 */
+    cursor: pointer; /* 커서 모양 변경 */
+}
+
+.search-button:hover {
+    background-color: #0056b3; /* 마우스 오버 시 배경 색상 */
+}
+
+.share-container {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* 수평 중앙 정렬 */
+    margin-top: 10px; /* 푸터와 간격 */
+}
+
+#share-url {
+    width: 300px; /* 입력 필드 너비 */
+    padding: 10px; /* 여백 */
+    border: 1px solid #ccc; /* 테두리 색상 */
+    border-radius: 4px; /* 둥근 모서리 */
+    margin-right: 5px; /* 버튼과 간격 */
+    cursor: default; /* 커서 모양 변경 */
+}
+
+#copy-button {
+    padding: 10px 15px; /* 여백 */
+    background-color: #007BFF; /* 버튼 배경 색상 */
+    color: white; /* 글자 색상 */
+    border: none; /* 테두리 제거 */
+    border-radius: 4px; /* 둥근 모서리 */
+    cursor: pointer; /* 커서 모양 변경 */
+}
+
+#copy-button:hover {
+    background-color: #0056b3; /* 마우스 오버 시 배경 색상 */
+}
+  </style>
 </head>
 <body>
+   
+  
     <header>
-        <h1>웹사이트1</h1>
-    </header>
-    <main>
-        <section>
-            <button id="clickMe">클릭해보세요!</button>
-        </section>
-    </main>
+        <h1>소리 기반 모기 퇴치제 연구</h1>
+        <p>작성자: 차지민</p>
+        <p>선택한 이유: 코로나 이후 전염병의 위험성이 생각보다 크다는 것을 깨닫고 이에 대해 해결 방법이 알고 싶어져서</p>
+        
+      </header>
+
+    <nav>
+        <ul>
+          <div class="search-container">
+          <input type="text" placeholder="검색..." class="search-box">
+          <button class="search-button">검색</button>
+         </div> 
+            <li><a href="#introduction">서론</a></li>
+            <li><a href="#previous-research">선행 연구</a></li>
+            <li><a href="#experiment-design">실험 설계</a></li>
+            <li><a href="#conclusion">결론</a></li>
+            <li><a href="#discussion">토의</a></li>
+        </ul>
+    </nav>
+
+    <section id="introduction">
+        <h2>서론</h2>
+        <button class="toggle-button" onclick="toggleContent('introContent')">내용 보기/숨기기</button>
+        <div id="introContent" class="content">
+        <p>최근 지구온난화로 인해 말라리아가 한국에도 들어오고 있다. 이로 인해 피해를 입는 직종 중 하나는 군인이다. 모기를 쫓아내기 위해서는 퇴치제를 사야 하는데, 계속해서 새로운 퇴치제를 사는 것은 비용도 많이 나가고 귀찮기도 하다. 따라서 군인들에게 소리로 곤충을 쫓아내는 sound spray와 비슷한 구조의 퇴치 용품을 만들어서 보급하면 좋을 것이다..</p>
+    </section>
+
+    <section id="previous-research">
+        <h2>선행 연구</h2>
+        <button class="toggle-button" onclick="toggleContent('researchContent')">내용 보기/숨기기</button>
+        <div id="researchContent" class="content">
+        <ul>
+            <li><a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=7373009&casa_token=lHFwZa-W-aUAAAAA:sVLAuHQkIxMNCCtihkaVDiLckmm6R9N2Nvz7aQ0-vbM1-xH4_mfAJpp5BYy8NpNgKftH1CRh6g">CMOS RC 발진기를 이용한 초음파 모기 퇴치기</a></li>
+            <li><a href="https://www.dbpia.co.kr/pdf/pdfView.do?nodeId=NODE02004958&language=ko_KR&hasTopBanner=true">적정기술- 사운드 스프레이</a></li>
+        </ul>
+    </section>
+
+    <section id="experiment-design">
+        <h2>실험 설계</h2>
+        <button class="toggle-button" onclick="toggleContent('experimentContent')">내용 보기/숨기기</button>
+        <div id="experimentContent" class="content">
+        <p>초음파 퇴치기로 파리나 모기를 퇴치할 때 38~44kHz의 초음파에 반응한다는 점을 이용해 퇴치 용품을 설계한다. 자석을 흔들어 에너지를 발생시켜 사용할 수 있도록 만들어 지속적으로 사용할 수 있도록 한다.</p>
+        
+        <h3>A. CMOS RC 발진기의 동작</h3>
+        <p>A. CMOS(반도체 제작 방법의 일종) RC 발진기의 동작
+제안된 CMOS RC 발진기는 세 개의 캐스케이드(서로 연결된) 인버팅(인버터:증폭기의 일종으로, 입력 신호와 출력 신호의 극성을 반전시키는 것) 증폭기, 커패시터(콘덴서(축전기), 전자기기에서 에너지를 저장하는 부품) 및 저항소자로 구성되어 있다.
+출력은 전원 전압(전원 단자의 전압)으로, 커패시터는 +0.5VDD에서 -0.5VDD로 흘려보낸다. </p>
+<p>(= 인버터를 서로 연결해서 증폭을 시켜서 커패시터의 지속적인 충전과 방전이 진동을 생성한다.) </p>
+<p>출력은 캐패시터와 저항과 트랜지스터를 통해 +0.5VDD에서 –0.5VDD로 방전 되면서 동작을 한다.</p>
+
+        
+        <h3>B. 수동 소자의 설계</h3>
+        
+        <p>CMOS RC 발진기의 저항기와 커패시터 값은 38 kHz 발진을 위해 설계되었으며, 최소 칩 면적 구현을 고려하였다. 0.35 마이크론 반도체 제작 공정을 통해 저전력, 초소형 칩 셋을 만들었다.</p>
+        <p>(=반도체 만드는 방법을 반도체 공정이라고 하는데, 이 반도체 공정이라는 것의 단위가 "마이크론 프로세스" 이고, 작으면 작을수록 높은 기술이고 고급 기술이다. 0.35 마이크론 프로세스 는0.35마이크론 등급의 반도체 공정을 사용했다는 의미)</p>
+        <p>수동 소자:회로 부품 중에서 저항소자나 콘덴서(like 배터리)와 같이 스스로 증폭이나 발진 등의 작용을 할 수 없는 것을 말하는데, 스스로 작동하는 능동 소자를 사용하기 위한 부속품으로써 필요한 것이다.</p>
+        <p>발진기: 교류를 만들어내는 소자 또는 회로 자체를 의미한다.</p>
+        <p>제작 공정: 복잡한 구조의 회로들을 굉장히 작게 만드는 것. 저전력, 초소형 칩 셋을 만드는 것</p>
+
+        <h3>C. 수동 소자의 레이아웃</h3>
+        
+        <p>시뮬레이션을 통해 최적의 저항기와 커패시터 값을 얻은 후 칩 레이아웃이 수행된다.</p>
+        <p>커패시턴스:물체가 전하를 축적하는 능력을 나타내는 물리량. 전기 용량 또는 정전용량이라고도 한다</p>
+        <p>레이아웃: 수동 소자를 최적화하고 효율적으로 배치하는 것. 칩 설계와 비슷하다.</p>
+
+
+        <h3>D. CMOS RC 발진기의 시뮬레이션</h3>
+        <p>레이아웃 구현 및 패러시틱추출 후, CMOS RC 발진기를 만든다. SPICE 시뮬레이션을 통해 이 CMOS RC 발진기에서 필요로 하는 주파수인 38.13kHz 발진을 안정적으로 생성하기 위해 필요한 R(저항값)과 C( 캐패시터, 배터리)값을 찾아준다.</p>
+        <p>시뮬레이션: 시뮬레이터를 통해 최대 출력 또는 효율을 갖는 RC(저항, 배터리)값을 찾는 과정</p>
+        <p> 패러시틱: 전자회로에서 기생 요소들을 추출하는 과정. 기생 요소란 설계된 장치나 회로에서 원하지 않는 용량, 저항, 인덕턴스 등의 요소들을 의미</p>
+
+
+
+
+      </section>
+
+    <section id="conclusion">
+        <h2>결론</h2>
+        <button class="toggle-button" onclick="toggleContent('conclusionContent')">내용 보기/숨기기</button>
+        <div id="conclusionContent" class="content">
+        <p>지속적으로 사용 가능하고 저렴한 퇴치기를 군인들에게 보급해 문제를 해결할 수 있으나, 효과는 환경적 요인에 따라 달라질 수 있다.</p>
+    </section>
+
+    <section id="discussion">
+        <h2>토의</h2>
+        <button class="toggle-button" onclick="toggleContent('discussionContent')">내용 보기/숨기기</button>
+        <div id="discussionContent" class="content">
+        <p>이 연구 결과를 통해 모기는 시기에 따라 기피하는 주파수가 달라진다는 것을 알 수 있었으며, 이들이 공통적으로 반응하는 주파수를 찾고 싶다. 모기가 들을 수 있는 주파수를 낼 수 있는 회로를 개발해보고 싶다.</p>
+    </section>
+
     <footer>
-        <p> 웹사이트</p>
-    </footer>
-    <script src="script.js"></script>
+        <p>연구 자료 출처: <a href="http://m.kyeongin.com/view.php?key=20240826010002664">경인일보</a></p>
+        
+          <span>사이트 주소 복사: </span> 
+          <div class="share-container">
+          <input type="text" id="share-url" value="http://JM'swebsite.com" readonly>
+          <button id="copy-button">복사</button>
+      </div>
+      </footer>
+
+    <script>
+      function toggleContent(contentId) {
+          const content = document.getElementById(contentId);
+          if (content.style.display === "none" || content.style.display === "") {
+              content.style.display = "block"; // 내용 보여주기
+          } else {
+              content.style.display = "none"; // 내용 숨기기
+          }
+      }
+  </script>
+
+<script>
+  document.getElementById('copy-button').addEventListener('click', function() {
+      const urlField = document.getElementById('share-url');
+      urlField.select();
+      urlField.setSelectionRange(0, 99999); // 모바일 대응
+      document.execCommand('copy'); // 복사
+      alert('URL이 복사되었습니다: ' + urlField.value);
+  });
+</script>
 </body>
 </html>
